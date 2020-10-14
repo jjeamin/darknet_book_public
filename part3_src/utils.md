@@ -64,6 +64,8 @@ int *read_map(char *filename)
 }
 ```
 
+- 파일의 내용을 int형으로 mapping하여 반환합니다.
+
 ## sorta_shuffle
 
 ```c
@@ -78,6 +80,8 @@ void sorta_shuffle(void *arr, size_t n, size_t size, size_t sections)
     }
 }
 ```
+
+- ???
 
 ## shuffle
 
@@ -368,6 +372,8 @@ unsigned char *read_file(char *filename)
 }
 ```
 
+- 파일을 읽어 반환합니다.
+
 ## malloc_error
 
 ```c
@@ -412,6 +418,8 @@ list *split_str(char *s, char delim)
 }
 ```
 
+- delim을 기준으로 문자열 s를 split해서 list에 담아 반환합니다.
+
 ## strip
 
 
@@ -430,6 +438,8 @@ void strip(char *s)
 }
 ```
 
+- 문자열에 포함되어있는 공백을 제거해줍니다.
+
 ## strip_char
 
 ```c
@@ -447,6 +457,8 @@ void strip_char(char *s, char bad)
 }
 ```
 
+- 문자열에 포함되어있는 bad를 제거해줍니다.
+
 ## free_ptrs
 
 ```c
@@ -458,7 +470,9 @@ void free_ptrs(void **ptrs, int n)
 }
 ```
 
-## free_ptrs
+- 포인터 메모리 할당을 해제합니다.
+
+## fgetl
 
 ```c
 char *fgetl(FILE *fp)
@@ -493,6 +507,8 @@ char *fgetl(FILE *fp)
 }
 ```
 
+- 파일에서 한줄을 읽어 반환합니다.
+
 ## read_int
 
 ```c
@@ -505,6 +521,8 @@ int read_int(int fd)
 }
 ```
 
+- 파일에 int형 값을 읽어서 n에 입력합니다.
+
 ## write_int
 
 ```c
@@ -514,6 +532,8 @@ void write_int(int fd, int n)
     if(next <= 0) error("read failed");
 }
 ```
+
+- 파일에 int형 값 n을 입력합니다.
 
 ## read_all_fail
 
@@ -530,6 +550,9 @@ int read_all_fail(int fd, char *buffer, size_t bytes)
 }
 ```
 
+- read_all과 같은 기능
+- 읽기에서 오류나는 경우 1을 반환 아닌 경우 0을 반환합니다.
+
 ## write_all_fail
 
 ```c
@@ -545,6 +568,9 @@ int write_all_fail(int fd, char *buffer, size_t bytes)
 }
 ```
 
+- write_all과 같은 기능
+- 쓰기에서 오류나는 경우 1을 반환 아닌 경우 0을 반환합니다.
+
 ## read_all
 
 ```c
@@ -559,6 +585,8 @@ void read_all(int fd, char *buffer, size_t bytes)
 }
 ```
 
+- 파일에 내용을 buffer에 읽어들입니다.
+
 ## write_all
 
 ```c
@@ -572,6 +600,8 @@ void write_all(int fd, char *buffer, size_t bytes)
     }
 }
 ```
+
+- 파일에 buffer에 담긴 내용을 입력합니다.
 
 ## copy_string
 
@@ -606,6 +636,8 @@ list *parse_csv_line(char *line)
     return l;
 }
 ```
+
+- 문장하나를 입력받아 list에 넣어 반환합니다.
 
 ## count_fields
 
@@ -836,7 +868,7 @@ float mag_array(float *a, int n)
 }
 ```
 
-- ???
+- $$\sqrt{\sum_{i=0}^{n} a_i^2}$$
 
 ## scale_array
 
@@ -869,11 +901,11 @@ int sample_array(float *a, int n)
 }
 ```
 
--
+- ???
 
 ## max_int_index
 
-```
+```c
 int max_int_index(int *a, int n)
 {
     if(n <= 0) return -1;
@@ -893,7 +925,7 @@ int max_int_index(int *a, int n)
 
 ## max_index
 
-```
+```c
 int max_index(float *a, int n)
 {
     if(n <= 0) return -1;
@@ -913,7 +945,7 @@ int max_index(float *a, int n)
 
 ## int_index
 
-```
+```c
 int int_index(int *a, int val, int n)
 {
     int i;
@@ -928,7 +960,7 @@ int int_index(int *a, int val, int n)
 
 ## rand_int
 
-```
+```c
 int rand_int(int min, int max)
 {
     if (max < min){
@@ -945,7 +977,7 @@ int rand_int(int min, int max)
 
 ## rand_normal
 
-```
+```c
 // From http://en.wikipedia.org/wiki/Box%E2%80%93Muller_transform
 float rand_normal()
 {
@@ -973,7 +1005,7 @@ float rand_normal()
 
 ## rand_size_t
 
-```
+```c
 size_t rand_size_t()
 {
     return  ((size_t)(rand()&0xff) << 56) |
@@ -991,7 +1023,7 @@ size_t rand_size_t()
 
 ## rand_uniform
 
-```
+```c
 float rand_uniform(float min, float max)
 {
     if(max < min){
@@ -1007,7 +1039,7 @@ float rand_uniform(float min, float max)
 
 ## rand_scale
 
-```
+```c
 float rand_scale(float s)
 {
     float scale = rand_uniform(1, s);
@@ -1020,7 +1052,7 @@ float rand_scale(float s)
 
 ## one_hot_encode
 
-```
+```c
 float **one_hot_encode(float *a, int n, int k)
 {
     int i;
@@ -1044,7 +1076,7 @@ return [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
 
 ## sum_array
 
-```
+```c
 float sum_array(float *a, int n)
 {
     int i;
@@ -1059,7 +1091,7 @@ float sum_array(float *a, int n)
 
 ## mean_array
 
-```
+```c
 float mean_array(float *a, int n)
 {
     return sum_array(a,n)/n;
