@@ -1,4 +1,36 @@
-# deconvolutional_layer.c
+# Deconvolutional Layer 란?
+
+deconvolution은 convolution을 반대로 연산합니다.
+
+기존의 convolution은 입력 특징맵과 필터를 컨볼루션 연산하여 출력 특징맵을 생성합니다. 이로인해 특징맵의 크기는 줄어듭니다. deconvolution은 이와 반대로 특징맵의 크기를 증가시킵니다.
+
+간혹 deconvolution과 transpose convolution이 헷갈리는데
+
+
+
+![deconv](/figure/deconv.gif)
+
+
+
+- 만약 5 x 5 이미지가 stride가 2, kernel size가 3인 컨볼루션 연산을 한다면 2 x 2 출력이 생성됩니다.
+- 이 과정을 반대로 하면 하나의 픽셀에서 9개의 값이 생성되도록 수학적 연산을 거꾸로 하면 deconvolution 입니다.
+
+
+
+![transconv](/figure/transconv.gif)
+
+
+
+- padding을 추가합니다.
+- 거꾸로 연산을 해서 되돌리지는 않습니다.
+
+추가적으로 dilated convolution은 연산량을 늘리지 않고 receptive field를 크게 만드는 효과적인 방법입니다.
+
+
+
+![dilatedconv](/figure/dilatedconv.PNG)
+
+
 
 ## get_workspace_size
 
