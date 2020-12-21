@@ -42,7 +42,7 @@
 * [cost_layer.c](/part3_src/cost_layer.md)                    <!-- 완료 -->
 * [crnn_layer.c](/part3_src/crnn_layer.md)                    <!-- 완료 -->
 * [crop_layer.c](/part3_src/crop_layer.md)                    <!-- 완료 -->
-* [data.c](/part3_src/data.md)
+* [data.c](/part3_src/data.md)                                <!-- 완료 -->
 * [deconvolutional_layer.c](/part3_src/deconvolutional_layer.md)
 * [demo.c](/part3_src/demo.md)
 * [detection_layer.c](/part3_src/detection_layer.md)
@@ -73,7 +73,7 @@
 * [softmax_layer.c](/part3_src/softmax_layer.md)              <!-- 완료 -->
 * [tree.c](/part3_src/tree.md)
 * [upsample_layer.c](/part3_src/upsample_layer.md)            <!-- 완료 -->
-* [utils.c](/part3_src/utils.md)
+* [utils.c](/part3_src/utils.md)                              <!-- 완료 -->
 * [yolo_layer.c](/part3_src/yolo_layer.md)
 
 * [image_opencv.cpp](/part3_src/image_opencv.md)

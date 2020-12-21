@@ -338,14 +338,14 @@ CSP(Cross-Stage-Partial-Connections)
 
 
 
-![tabel2](/figure/paper/yolov4/tabel2.PNG)
+![tabel2](/figure/paper/yolov4/table2.PNG)
 
 
 
 
 
 
-![tabel3](/figure/paper/yolov4/tabel3.PNG)
+![tabel3](/figure/paper/yolov4/table3.PNG)
 
 
 
@@ -361,7 +361,7 @@ CSP(Cross-Stage-Partial-Connections)
 
 
 
-![tabel4](/figure/paper/yolov4/tabel4.PNG)
+![tabel4](/figure/paper/yolov4/table4.PNG)
 
 
 
@@ -372,7 +372,7 @@ CSP(Cross-Stage-Partial-Connections)
 
 
 
-![tabel5](/figure/paper/yolov4/tabel5.PNG)
+![tabel5](/figure/paper/yolov4/table5.PNG)
 
 
 
