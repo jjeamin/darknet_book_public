@@ -27,12 +27,10 @@
 4. 수정하기
 5. Pull Requests 날리기
 
-확인을 하면서 작업을 진행하시길 원한다면 빌드를 해주세요
+확인을 하면서 작업을 진행하시길 원한다면 아래 명령어를 사용해주세요
 
 ```
-gitbook build
-cd _book
-jekyll serve
+gitbook serve
 ```
 
 ### :blush: 이 문서를 작성하면서 얻기 원하는 것 :blush:
