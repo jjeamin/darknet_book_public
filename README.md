@@ -31,6 +31,8 @@
 
 ```
 gitbook build
+cd _book
+jekyll serve
 ```
 
 ### :blush: 이 문서를 작성하면서 얻기 원하는 것 :blush:
