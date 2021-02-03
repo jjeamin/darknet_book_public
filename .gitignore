@@ -1,2 +1,4 @@
-/node_modules/
-/_book/
+node_modules/
+_book/
+.jekyll-cache/
+_site/
